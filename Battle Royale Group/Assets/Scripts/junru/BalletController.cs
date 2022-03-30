@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class BalletController : MonoBehaviour
 {
     int speed = 5;
-    int jumpForce = 50;
-    //int health = 5;
+    int jumpForce = 300;
+    int health = 5;
 
     bool alive = true;
     bool hurt = false;
@@ -78,6 +78,57 @@ public class BalletController : MonoBehaviour
 
             _animator.SetTrigger("shoot");
         }
+    }
+
+    private void FixedUpdate()
+    {
+        grounded = Physics2D.OverlapCircle(feetPos.position, .5f, groundLayer);
+        _animator.SetBool("grounded", grounded);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (alive && !hurt && other.gameObject.CompareTag("Enemy"))
+        {
+            
+            if (health > 0)
+            {
+                health--;
+        
+            }
+
+
+
+            if (health < 1)
+            {
+                StartCoroutine(Die());
+            }
+            else
+            {
+                StartCoroutine(GotHurt());
+            }
+
+
+        }
+    }
+    IEnumerator GotHurt()
+    {
+        hurt = true;
+        _animator.SetTrigger("hurt");
+        // _animator.SetBool("hurt",hurt);
+        _rigidbody.AddForce(new Vector2(-transform.localScale.x * 50, 50));
+
+        yield return new WaitForSeconds(.5f);
+        hurt = false;
+        // _animator.SetBool("hurt",hurt);
+    }
+
+    IEnumerator Die()
+    {
+        _animator.SetTrigger("die");
+        yield return new WaitForSeconds(0.8f);
+        alive = false;
+        SceneManager.LoadScene("GameOver");
     }
 
 

@@ -373,27 +373,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5497212869453053598, guid: ce7814f5b9e82450a8eaa119f986f1bb, type: 3}
   m_PrefabInstance: {fileID: 5497212868851732689}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1021931088
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021931087}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &2033488065
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +527,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: BalletJunru
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2273017576473692035, guid: ce7814f5b9e82450a8eaa119f986f1bb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce7814f5b9e82450a8eaa119f986f1bb, type: 3}
