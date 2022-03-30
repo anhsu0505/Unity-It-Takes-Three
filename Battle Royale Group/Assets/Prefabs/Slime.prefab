@@ -185,7 +185,7 @@ MonoBehaviour:
   grounded: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 119
   feetPos: {fileID: 3003324649046483283}
 --- !u!61 &3003324649555693828
 BoxCollider2D:

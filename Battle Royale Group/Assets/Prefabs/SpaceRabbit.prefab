@@ -219,7 +219,7 @@ MonoBehaviour:
   onGround: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 119
   feet: {fileID: 6017295724184870196}
   canDoubleJump: 0
   bulletPrefab: {fileID: 4215805176782169270, guid: d583fa87636a2de41838f86f14eb5cef, type: 3}
