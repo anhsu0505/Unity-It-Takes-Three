@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class BalletController : MonoBehaviour
 {
+    //for multiplayer
+    public int playerNum = 2;
+    string attackBtn;
+    string jumpBtn;
+    string xInputAxis;
+
     int speed = 5;
-    int jumpForce = 300;
+    int jumpForce = 500;
     int health = 5;
 
     bool alive = true;
@@ -16,7 +22,7 @@ public class BalletController : MonoBehaviour
     //public TextMeshProUGUI lifeUI;
 
     public GameObject bulletPrefeb;
-    private float bulletForce = 50;
+    private float bulletForce = 100;
 
     public Transform spawnPoint;
 
@@ -36,18 +42,18 @@ public class BalletController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         //lifeUI.text = "Life: " + health;
+
+        attackBtn = "Attack"+playerNum;
+        jumpBtn = "Jump" + playerNum;
+        xInputAxis = "Horizontal" + playerNum;
     }
 
 
     void Update()
     {
-        if (!alive || hurt)
-        {
-            return;//exit it
-        }
 
+        float xSpeed = Input.GetAxis(xInputAxis)*speed;
 
-        float xSpeed = Input.GetAxis("Horizontal") * speed;
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
         //Mathf.Abs means when ever + or - so make sure the xspeed both applies to forward and backward
@@ -62,14 +68,14 @@ public class BalletController : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
         }
 
-        if (grounded && Input.GetButtonDown("Jump"))
+        if (grounded && Input.GetButtonDown(jumpBtn))
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
             _rigidbody.AddForce(new Vector2(0, jumpForce));
            
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(attackBtn))
         {
             Vector2 bulletDir = new Vector2(transform.localScale.x, 0);
             bulletDir *= bulletForce;
@@ -91,11 +97,11 @@ public class BalletController : MonoBehaviour
         if (alive && !hurt && other.gameObject.CompareTag("Enemy"))
         {
             
-            if (health > 0)
-            {
-                health--;
+            // if (health > 0)
+            // {
+            //     health--;
         
-            }
+            // }
 
 
 

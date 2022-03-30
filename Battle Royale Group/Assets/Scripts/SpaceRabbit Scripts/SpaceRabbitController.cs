@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SpaceRabbitController : MonoBehaviour
 {
+    public int playerNum = 3;
+    string attackBtn;
+    string jumpBtn;
+    string xInputAxis;
+
     public static SpaceRabbitController instance;
 
     public float speed = 5;
@@ -33,6 +38,7 @@ public class SpaceRabbitController : MonoBehaviour
     private float knockBackCounter;
 
     private bool hurt;
+    
 
     private void Awake()
     {
@@ -46,6 +52,10 @@ public class SpaceRabbitController : MonoBehaviour
         rabbitAnimator = GetComponent<Animator>();
         onGround = true;
         canDoubleJump = false;
+
+        attackBtn = "Attack"+playerNum;
+        jumpBtn = "Jump" + playerNum;
+        xInputAxis = "Horizontal" + playerNum;
     }
 
     // Update is called once per frame
@@ -83,29 +93,30 @@ public class SpaceRabbitController : MonoBehaviour
     private void JumpControl()
     {
         // Check if player presses Space
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Check if player is on the ground
-            if (onGround)
+        if (Input.GetButtonDown(jumpBtn))
             {
-                Jump();
-                // Enable double jump
-                canDoubleJump = true;
+                // Check if player is on the ground
+                if (onGround)
+                {
+                    Jump();
+                    // Enable double jump
+                    canDoubleJump = true;
+                }
+                // Check if player can double jump
+                else if (canDoubleJump)
+                {
+                    Jump();
+                    // Disable double jump
+                    canDoubleJump = false;
+                }
             }
-            // Check if player can double jump
-            else if (canDoubleJump)
-            {
-                Jump();
-                // Disable double jump
-                canDoubleJump = false;
-            }
-        }
+        
     }
 
     private void MoveRabbit()
     {
         // Player's input
-        float xSpeed = Input.GetAxis("Horizontal") * speed;
+        float xSpeed = Input.GetAxis(xInputAxis) * speed;
 
         // Move rabbit
         rabbitRb.velocity = new Vector2(xSpeed, rabbitRb.velocity.y);
@@ -123,7 +134,7 @@ public class SpaceRabbitController : MonoBehaviour
     private void Shoot()
     {
         // Check if player presses fire
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(attackBtn))
         {
             // The direction of the bullet
             Vector2 bulletDir = new Vector2(transform.localScale.x, 0);

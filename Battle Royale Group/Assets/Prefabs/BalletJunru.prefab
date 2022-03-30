@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613926614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1108594023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1021931088}
   - component: {fileID: 1021931089}
   - component: {fileID: 2381482479251216892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BalletJunru
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -179,12 +179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa6c300a4ba64a49a57564f2691842f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 2
   bulletPrefeb: {fileID: 9097062868211040304, guid: 2739ff5c7d4d845ba8e8c8952fbc9064, type: 3}
   spawnPoint: {fileID: 613926614}
   grounded: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 64
   feetPos: {fileID: 1108594023}
 --- !u!70 &1021931089
 CapsuleCollider2D:
@@ -217,7 +218,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

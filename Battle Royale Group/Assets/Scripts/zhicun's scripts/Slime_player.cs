@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Slime_player : MonoBehaviour
 {
+    public int playerNum = 1;
+    string attackBtn;
+    string jumpBtn;
+    string xInputAxis;
+
     int speed = 5;
     int JumpForce = 600;
     int bulletForce = 100;
@@ -33,24 +38,31 @@ public class Slime_player : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
 
-        lifeUI.text = "Life: "+health;
+        attackBtn = "Attack"+playerNum;
+        jumpBtn = "Jump" + playerNum;
+        xInputAxis = "Horizontal" + playerNum;
+
+        // lifeUI.text = "Life: "+health;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!alive || hurt){
-            return;//exit it
-        }
+        // if(!alive || hurt){
+        //     return;//exit it
+        // }
 
-        if(transform.position.y<-10){
-            alive = !alive;
-            SceneManager.LoadScene("GameOver");
-        }
+        //if fall down
+        // if(transform.position.y<-10){
+        //     alive = !alive;
+        //     SceneManager.LoadScene("GameOver");
+        // }
 
-        float xSpeed = Input.GetAxis("Horizontal")*speed;
-        float yInput = Input.GetAxis("Vertical")*4;
+        float xSpeed = Input.GetAxis(xInputAxis)*speed;
+
+        // float yInput = Input.GetAxis("Vertical1")*4;
+
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("speed", Mathf.Abs(xSpeed));//int use SetInteger
 
@@ -64,13 +76,13 @@ public class Slime_player : MonoBehaviour
             transform.localScale *= new Vector2(-1,1);
         }
 
-        if(grounded && Input.GetButtonDown("Jump")){
+        if(grounded && Input.GetButtonDown(jumpBtn)){
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x,0);
             _rigidbody.AddForce(new Vector2(0, JumpForce));
             //_animator.SetFloat("yaxis",transform.position.y);
         }
 
-        if(Input.GetButtonDown("Fire1")){
+        if(Input.GetButtonDown(attackBtn)){
             Vector2 bulletDir = new Vector2(transform.localScale.x,0);
             bulletDir *= bulletForce;
            GameObject newBullet = Instantiate(bulletPrefeb, spawnPoint.position, Quaternion.identity);
@@ -80,20 +92,21 @@ public class Slime_player : MonoBehaviour
         }
     }
 
+
+    //grounded detective
     private void FixedUpdate(){
-        grounded = Physics2D.OverlapCircle(feetPos.position, .5f, groundLayer);
+        grounded = Physics2D.OverlapCircle(feetPos.position, .3f, groundLayer);
         _animator.SetBool("grounded", grounded);
     }
 
     private void OnCollisionEnter2D(Collision2D other){
         if(alive && !hurt && other.gameObject.CompareTag("Enemy")){
-            print("-------");
-            if(health>0){
-            health--;
-            lifeUI.text = "Life: "+health;
-            }
-    
 
+            // print("-------");
+            // if(health>0){
+            // health--;
+            // lifeUI.text = "Life: "+health;
+            // }
 
             if(health <1){
                 StartCoroutine(Die());
@@ -106,9 +119,11 @@ public class Slime_player : MonoBehaviour
 
         }
     }
+    
     IEnumerator GotHurt(){
     hurt = true;
         _animator.SetTrigger("hurt");
+
     // _animator.SetBool("hurt",hurt);
     _rigidbody.AddForce(new Vector2(-transform.localScale.x * 50, 50));
 
