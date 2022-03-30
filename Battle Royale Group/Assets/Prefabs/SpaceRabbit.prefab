@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6017295724184870196}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6017295724424322597}
   - component: {fileID: 6017295724424322595}
   - component: {fileID: 6017295724424322593}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: SpaceRabbit
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   onGround: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 151
+    m_Bits: 64
   feet: {fileID: 6017295724184870196}
   canDoubleJump: 0
   bulletPrefab: {fileID: 4215805176782169270, guid: d583fa87636a2de41838f86f14eb5cef, type: 3}
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6017295725450266648}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bullet Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
