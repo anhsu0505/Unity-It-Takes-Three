@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Bullet
   - ice_bullet
+  - Enemy
+  - Alien
+  - Poison
+  - Boss
+  - PickUp
   layers:
   - Default
   - TransparentFX

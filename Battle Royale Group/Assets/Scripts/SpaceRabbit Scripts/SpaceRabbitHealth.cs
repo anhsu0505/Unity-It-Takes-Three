@@ -23,6 +23,8 @@ public class SpaceRabbitHealth : MonoBehaviour
 
     public Transform launchPos;
 
+    private PowerUpController powerUpController;
+
     private void Awake()
     {
         instance = this;
@@ -35,6 +37,7 @@ public class SpaceRabbitHealth : MonoBehaviour
         currentLives = maxLives;
         currentHealth = maxHealth;
         rabbitSR = GetComponent<SpriteRenderer>();
+        powerUpController = GetComponent<PowerUpController>();
     }
 
     // Update is called once per frame
@@ -68,7 +71,7 @@ public class SpaceRabbitHealth : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if (invincibleCounter <= 0)
+        if (invincibleCounter <= 0 && powerUpController.invinciblePowerUp == false)
         {
             if (isAlive && currentHealth > 0)
             {

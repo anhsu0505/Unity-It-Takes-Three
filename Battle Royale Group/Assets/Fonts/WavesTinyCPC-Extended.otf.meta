@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: acb3726d9555454478669e1555b3ba1c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Waves Tiny CPC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 01e7800e6974fe943a470744d45b4c8b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

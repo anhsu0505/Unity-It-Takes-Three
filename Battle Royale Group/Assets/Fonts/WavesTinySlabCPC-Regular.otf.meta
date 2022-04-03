@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7742daa987ae66a44a5ba7dcf4690a3f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Waves Tiny Slab CPC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0264d1669c7e37d45b8ceb8bb4d4f106, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
