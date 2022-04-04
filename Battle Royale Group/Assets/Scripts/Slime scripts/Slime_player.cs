@@ -103,6 +103,8 @@ public class Slime_player : MonoBehaviour
         platformCounter = Physics2D.OverlapCircle(transform.position, .3f, platformTriggerLayer);
     }
 
+    // This section has been replaced by a separate health controller script
+    /*
     private void OnCollisionEnter2D(Collision2D other){
         if(alive && !hurt && other.gameObject.CompareTag("Enemy")){
 
@@ -142,5 +144,6 @@ public class Slime_player : MonoBehaviour
         alive = false;
         SceneManager.LoadScene("GameOver");
     }
+    */
 }
 
