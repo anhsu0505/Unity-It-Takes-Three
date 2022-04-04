@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceRabbitHealth : MonoBehaviour
+public class HealthController : MonoBehaviour
 {
-    public static SpaceRabbitHealth instance;
-
     public int maxHealth = 100;
 
     public int maxLives = 3;
@@ -16,23 +14,26 @@ public class SpaceRabbitHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public RabbitLivesDisplay livesDisplay;
+    public LivesDisplay livesDisplay;
 
     public bool isAlive;
+
+    bool hurt = false;
 
     public float invincibleLength;
     private float invincibleCounter;
 
-    private SpriteRenderer rabbitSR;
+    private SpriteRenderer playerSR;
+
+    public GameObject player;
 
     public Transform launchPos;
 
     private PowerUpController powerUpController;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    private Animator _animator;
+
+    Rigidbody2D _rigidbody;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,10 @@ public class SpaceRabbitHealth : MonoBehaviour
         currentLives = maxLives;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        rabbitSR = GetComponent<SpriteRenderer>();
+        playerSR = GetComponent<SpriteRenderer>();
         powerUpController = GetComponent<PowerUpController>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -58,7 +61,7 @@ public class SpaceRabbitHealth : MonoBehaviour
             if (invincibleCounter <= 0)
             {
                 // Change player avatar back to normal
-                rabbitSR.color = new Color(rabbitSR.color.r, rabbitSR.color.g, rabbitSR.color.b, 1);
+                playerSR.color = new Color(playerSR.color.r, playerSR.color.g, playerSR.color.b, 1);
             }
         }
 
@@ -70,16 +73,17 @@ public class SpaceRabbitHealth : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            Death();
+            StartCoroutine(Die());
         }
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (invincibleCounter <= 0 && powerUpController.invinciblePowerUp == false)
         {
             if (isAlive && currentHealth > 0)
             {
+                StartCoroutine(GotHurt());
                 // Reduce player's health
                 currentHealth -= damage;
                 // Set the health bar to reflect current health
@@ -87,9 +91,8 @@ public class SpaceRabbitHealth : MonoBehaviour
                 // Reset invincible counter
                 invincibleCounter = invincibleLength;
                 // Display invincibility - reduce player avatar's opacity
-                rabbitSR.color = new Color(rabbitSR.color.r, rabbitSR.color.g, rabbitSR.color.b, 0.5f);
-                // Knock player back
-                SpaceRabbitController.instance.KnockBack();
+                playerSR.color = new Color(playerSR.color.r, playerSR.color.g, playerSR.color.b, 0.5f);
+                
             }
 
             if (currentHealth <= 0 && currentLives > 0)
@@ -97,29 +100,20 @@ public class SpaceRabbitHealth : MonoBehaviour
                 LoseLives();
             }
         }
-        
+
         if (currentLives <= 0)
         {
-            Death();
+            StartCoroutine(Die());
         }
     }
 
-    private void Death()
-    {
-        // Set current lives to 0
-        currentLives = 0;
-        isAlive = false;
-        // Remove player from scene
-        gameObject.SetActive(false);
-        Debug.Log("Game Over.");
-    }
 
     private void LoseLives()
     {
         Debug.Log("Lose one life.");
         // Take away 1 life
         currentLives--;
-        
+
         if (currentLives >= 1)
         {
             // Reset current health to max
@@ -150,4 +144,26 @@ public class SpaceRabbitHealth : MonoBehaviour
         }
     }
 
+    IEnumerator GotHurt()
+    {
+        // Set Hurt animation trigger
+        _animator.SetTrigger("Hurt");
+        _rigidbody.AddForce(new Vector2(-transform.localScale.x * 50, 50));
+        yield return new WaitForSeconds(.5f);
+    }
+
+    IEnumerator Die()
+    {
+        // Set current lives to 0
+        currentLives = 0;
+        // Set isAlive to false
+        isAlive = false;
+        // Update lives bar display
+        livesDisplay.UpdateLivesDisplay();
+        // Set Die animation trigger
+        _animator.SetTrigger("Die");
+        yield return new WaitForSeconds(0.5f);
+        // Remove player from scene
+        gameObject.SetActive(false);
+    }
 }

@@ -14,9 +14,9 @@ public class BalletController : MonoBehaviour
 
     int speed = 5;
     int jumpForce = 500;
-    int health = 5;
+    //int health = 5;
 
-    bool alive = true;
+    //bool alive = true;
     bool hurt = false;
 
     //public TextMeshProUGUI lifeUI;
@@ -35,14 +35,14 @@ public class BalletController : MonoBehaviour
     public LayerMask groundLayer;
     public Transform feetPos;
 
-
+    private HealthController healthController;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         //lifeUI.text = "Life: " + health;
-
+        healthController = GetComponent<HealthController>();
         attackBtn = "Attack"+playerNum;
         jumpBtn = "Jump" + playerNum;
         xInputAxis = "Horizontal" + playerNum;
@@ -51,39 +51,42 @@ public class BalletController : MonoBehaviour
 
     void Update()
     {
-
-        float xSpeed = Input.GetAxis(xInputAxis)*speed;
-
-        _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
-        _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
-        //Mathf.Abs means when ever + or - so make sure the xspeed both applies to forward and backward
-
-        _animator.SetBool("Hurt", hurt);
-
-
-        if (xSpeed > 0 && transform.localScale.x < 0
-            || xSpeed < 0 && transform.localScale.x > 0)
-        //detects when facing left or right
+        // Only allow control if player is alive
+        if (healthController.isAlive)
         {
-            transform.localScale *= new Vector2(-1, 1);
-        }
+            float xSpeed = Input.GetAxis(xInputAxis) * speed;
 
-        if (grounded && Input.GetButtonDown(jumpBtn))
-        {
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
-            _rigidbody.AddForce(new Vector2(0, jumpForce));
-           
-        }
+            _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
+            _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+            //Mathf.Abs means when ever + or - so make sure the xspeed both applies to forward and backward
 
-        if (Input.GetButtonDown(attackBtn))
-        {
-            Vector2 bulletDir = new Vector2(transform.localScale.x, 0);
-            bulletDir *= bulletForce;
-            GameObject newBullet = Instantiate(bulletPrefeb, spawnPoint.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
+            _animator.SetBool("Hurt", hurt);
 
-            _animator.SetTrigger("shoot");
-        }
+
+            if (xSpeed > 0 && transform.localScale.x < 0
+                || xSpeed < 0 && transform.localScale.x > 0)
+            //detects when facing left or right
+            {
+                transform.localScale *= new Vector2(-1, 1);
+            }
+
+            if (grounded && Input.GetButtonDown(jumpBtn))
+            {
+                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
+                _rigidbody.AddForce(new Vector2(0, jumpForce));
+
+            }
+
+            if (Input.GetButtonDown(attackBtn))
+            {
+                Vector2 bulletDir = new Vector2(transform.localScale.x, 0);
+                bulletDir *= bulletForce;
+                GameObject newBullet = Instantiate(bulletPrefeb, spawnPoint.position, Quaternion.identity);
+                newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
+
+                _animator.SetTrigger("shoot");
+            }
+        }       
     }
 
     private void FixedUpdate()
@@ -92,6 +95,8 @@ public class BalletController : MonoBehaviour
         _animator.SetBool("grounded", grounded);
     }
 
+    // This part has been replaced with a Health Controller script
+    /*
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (alive && !hurt && other.gameObject.CompareTag("Enemy"))
@@ -136,6 +141,7 @@ public class BalletController : MonoBehaviour
         alive = false;
         SceneManager.LoadScene("GameOver");
     }
+    */
 
 
 
