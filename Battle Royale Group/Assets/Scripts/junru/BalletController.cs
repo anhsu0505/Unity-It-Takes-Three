@@ -37,6 +37,10 @@ public class BalletController : MonoBehaviour
 
     private HealthController healthController;
 
+    //elevatorTrigger
+    public bool platformCounter;
+    public LayerMask platformTriggerLayer;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -93,6 +97,9 @@ public class BalletController : MonoBehaviour
     {
         grounded = Physics2D.OverlapCircle(feetPos.position, .5f, groundLayer);
         _animator.SetBool("grounded", grounded);
+
+        //elevatorTrigger
+        platformCounter = Physics2D.OverlapCircle(feetPos.position, .3f, platformTriggerLayer);
     }
 
     // This part has been replaced with a Health Controller script

@@ -1,0 +1,1032 @@
+fileFormatVersion: 2
+guid: 2a1df973ab30d44008929a19bb6d6c6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4150517446602122645
+    second: icebrick_0
+  - first:
+      213: 7197680390412562631
+    second: icebrick_1
+  - first:
+      213: 5390928644500114077
+    second: icebrick_2
+  - first:
+      213: 244096627934030016
+    second: icebrick_3
+  - first:
+      213: -6787302274291156858
+    second: icebrick_4
+  - first:
+      213: 8626058339870204810
+    second: icebrick_5
+  - first:
+      213: -2475932678405649464
+    second: icebrick_6
+  - first:
+      213: -9160847351439162741
+    second: icebrick_7
+  - first:
+      213: 139745585923017634
+    second: icebrick_8
+  - first:
+      213: 2197231689915263859
+    second: icebrick_9
+  - first:
+      213: 5756052449700875118
+    second: icebrick_10
+  - first:
+      213: -495385695652929079
+    second: icebrick_11
+  - first:
+      213: -5478732380942168051
+    second: icebrick_12
+  - first:
+      213: -2099663126426798590
+    second: icebrick_13
+  - first:
+      213: -2643956854546147654
+    second: icebrick_14
+  - first:
+      213: 6561128217194321060
+    second: icebrick_15
+  - first:
+      213: -5045264869872279058
+    second: icebrick_16
+  - first:
+      213: 6257315766505319278
+    second: icebrick_17
+  - first:
+      213: 2424954390308832758
+    second: icebrick_18
+  - first:
+      213: -6132534686578163649
+    second: icebrick_19
+  - first:
+      213: 4000332997161617772
+    second: icebrick_20
+  - first:
+      213: 3248764907644102835
+    second: icebrick_21
+  - first:
+      213: -4597057380650164195
+    second: icebrick_22
+  - first:
+      213: 2755220617659164656
+    second: icebrick_23
+  - first:
+      213: -1126819113903814377
+    second: icebrick_24
+  - first:
+      213: 1589714324483937494
+    second: icebrick_25
+  - first:
+      213: -8767704162411253212
+    second: icebrick_26
+  - first:
+      213: -4461548924231594508
+    second: icebrick_27
+  - first:
+      213: -6693433473400886297
+    second: icebrick_28
+  - first:
+      213: -8727617030902217578
+    second: icebrick_29
+  - first:
+      213: -7015307237612720966
+    second: icebrick_30
+  - first:
+      213: -6017911637851538143
+    second: icebrick_31
+  - first:
+      213: 8161417216641366273
+    second: icebrick_32
+  - first:
+      213: -6637237029830651217
+    second: icebrick_33
+  - first:
+      213: 7523792572270801570
+    second: icebrick_34
+  - first:
+      213: 2399459261686566601
+    second: icebrick_35
+  - first:
+      213: 2038196511223627426
+    second: icebrick_36
+  - first:
+      213: 1053894180110800982
+    second: icebrick_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: icebrick_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 621
+        width: 111
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595e7c690a9999930800000000000000
+      internalID: 4150517446602122645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 625
+        width: 120
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0f55d1e2c43e360800000000000000
+      internalID: 7197680390412562631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_2
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 624
+        width: 126
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a48e03a0d60da40800000000000000
+      internalID: 5390928644500114077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 700
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8e0eef694336300800000000000000
+      internalID: 244096627934030016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_4
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 434
+        width: 117
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688bcadca88aec1a0800000000000000
+      internalID: -6787302274291156858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 628
+        width: 39
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8362c77b5ae5b770800000000000000
+      internalID: 8626058339870204810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_6
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 677
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb89d7d858b3add0800000000000000
+      internalID: -2475932678405649464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_7
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 609
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8204efbed12ed080800000000000000
+      internalID: -9160847351439162741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 480
+        width: 108
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abced7bed970f100800000000000000
+      internalID: 139745585923017634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 477
+        width: 108
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b61ae94922e7e10800000000000000
+      internalID: 2197231689915263859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_10
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 487
+        width: 111
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b00f4c43b91ef40800000000000000
+      internalID: 5756052449700875118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_11
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 484
+        width: 111
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c12ccf95590029f0800000000000000
+      internalID: -495385695652929079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 475
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0013865de1a7f3b0800000000000000
+      internalID: -5478732380942168051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_13
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 437
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2063851d28f7cd2e0800000000000000
+      internalID: -2099663126426798590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 424
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab65153cf37ce4bd0800000000000000
+      internalID: -2643956854546147654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 338
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4d8a7e95fcd0b50800000000000000
+      internalID: 6561128217194321060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 337
+        width: 122
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee16181f45e9bf9b0800000000000000
+      internalID: -5045264869872279058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 335
+        width: 149
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b2006798376d650800000000000000
+      internalID: 6257315766505319278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_18
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 405
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5c1e68b2b27a120800000000000000
+      internalID: 2424954390308832758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_19
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 335
+        width: 153
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f304fb1b13cd4eaa0800000000000000
+      internalID: -6132534686578163649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_20
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 399
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69871f8aa9048730800000000000000
+      internalID: 4000332997161617772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_21
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 343
+        width: 162
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8a1e6887ee51d20800000000000000
+      internalID: 3248764907644102835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_22
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 147
+        width: 147
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1062462ba8f330c0800000000000000
+      internalID: -4597057380650164195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_23
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 216
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f72861dd828c3620800000000000000
+      internalID: 2755220617659164656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_24
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 150
+        width: 177
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71984ad6cfbbc50f0800000000000000
+      internalID: -1126819113903814377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_25
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 156
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4173561cccf0610800000000000000
+      internalID: 1589714324483937494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_26
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 146
+        width: 149
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42273cf748bd25680800000000000000
+      internalID: -8767704162411253212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_27
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 215
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd462744e46512c0800000000000000
+      internalID: -4461548924231594508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_28
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 165
+        width: 111
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb2b3228b52c13a0800000000000000
+      internalID: -6693433473400886297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_29
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 165
+        width: 111
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6948c612d8641e680800000000000000
+      internalID: -8727617030902217578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_30
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 190
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abceddf6c3f94ae90800000000000000
+      internalID: -7015307237612720966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_31
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 179
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d7b28ef351c7ca0800000000000000
+      internalID: -6017911637851538143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_32
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 178
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1097aada7bd234170800000000000000
+      internalID: 8161417216641366273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_33
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 48
+        width: 116
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa210e2461cc3e3a0800000000000000
+      internalID: -6637237029830651217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_34
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 20
+        width: 143
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a27ce15b71e96860800000000000000
+      internalID: 7523792572270801570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_35
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 90
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce49d15c779c4120800000000000000
+      internalID: 2399459261686566601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_36
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 39
+        width: 111
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aebce99de0294c10800000000000000
+      internalID: 2038196511223627426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icebrick_37
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 61
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6581b5c4c2f20ae00800000000000000
+      internalID: 1053894180110800982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

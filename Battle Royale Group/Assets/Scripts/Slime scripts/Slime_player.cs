@@ -10,6 +10,7 @@ public class Slime_player : MonoBehaviour
     string attackBtn;
     string jumpBtn;
     string xInputAxis;
+    string attackFire;
 
     int speed = 5;
     int JumpForce = 600;
@@ -21,7 +22,8 @@ public class Slime_player : MonoBehaviour
 
     public TextMeshProUGUI lifeUI;
 
-    public GameObject bulletPrefeb;
+    public GameObject bulletPrefeb_ice;
+    public GameObject bulletPrefeb_fire;
 
     public Transform spawnPoint;
 
@@ -32,6 +34,7 @@ public class Slime_player : MonoBehaviour
     public LayerMask groundLayer;
     public Transform feetPos;
 
+    //elevatorTrigger
     public bool platformCounter;
     public LayerMask platformTriggerLayer;
 
@@ -42,6 +45,7 @@ public class Slime_player : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         attackBtn = "Attack"+playerNum;
+        attackFire = "AttackFire";
         jumpBtn = "Jump" + playerNum;
         xInputAxis = "Horizontal" + playerNum;
 
@@ -64,16 +68,8 @@ public class Slime_player : MonoBehaviour
 
         float xSpeed = Input.GetAxis(xInputAxis)*speed;
 
-        // float yInput = Input.GetAxis("Vertical1")*4;
-
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("speed", Mathf.Abs(xSpeed));//int use SetInteger
-
-
-        //FixedUpdate
-        // Vector2 yForce = new Vector2(0,yInput);
-        // _rigidbody.AddForce(yForce * Time.timeScale * 200  * Time.deltaTime);
-        // _animator.SetFloat("yaxis",transform.position.y);
 
         if(xSpeed>0 && transform.localScale.x<0 || xSpeed<0 && transform.localScale.x>0){
             transform.localScale *= new Vector2(-1,1);
@@ -88,10 +84,19 @@ public class Slime_player : MonoBehaviour
         if(Input.GetButtonDown(attackBtn)){
             Vector2 bulletDir = new Vector2(transform.localScale.x,0);
             bulletDir *= bulletForce;
-           GameObject newBullet = Instantiate(bulletPrefeb, spawnPoint.position, Quaternion.identity);
+           GameObject newBullet = Instantiate(bulletPrefeb_ice, spawnPoint.position, Quaternion.identity);
            newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
 
            _animator.SetTrigger("shoot");
+        }
+
+        if(Input.GetButtonDown(attackFire)){
+            Vector2 bulletDir = new Vector2(transform.localScale.x,0);
+            bulletDir *= bulletForce;
+           GameObject newBullet = Instantiate(bulletPrefeb_fire, spawnPoint.position, Quaternion.identity);
+           newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
+
+           _animator.SetTrigger("fireShoot");
         }
     }
 
@@ -100,6 +105,8 @@ public class Slime_player : MonoBehaviour
     private void FixedUpdate(){
         grounded = Physics2D.OverlapCircle(feetPos.position, .3f, groundLayer);
         _animator.SetBool("grounded", grounded);
+
+        //elevatorTrigger
         platformCounter = Physics2D.OverlapCircle(transform.position, .3f, platformTriggerLayer);
     }
 

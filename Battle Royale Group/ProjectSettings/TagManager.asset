@@ -11,6 +11,8 @@ TagManager:
   - Poison
   - Boss
   - PickUp
+  - fire_bullet
+  - IceBrick
   layers:
   - Default
   - TransparentFX
