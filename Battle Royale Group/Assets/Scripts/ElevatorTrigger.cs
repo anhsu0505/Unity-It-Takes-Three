@@ -9,6 +9,6 @@ public class ElevatorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2 (elevator.transform.position.x, elevator.transform.position.y+0.7f);
+        transform.position = new Vector2 (elevator.transform.position.x, elevator.transform.position.y+0.5f);
     }
 }
