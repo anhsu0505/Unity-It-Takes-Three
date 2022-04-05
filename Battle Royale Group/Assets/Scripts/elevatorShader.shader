@@ -10,16 +10,17 @@ Shader "Unlit/elevatorShader"
     {
         Tags 
         { 
-            "RenderType"="Transparent"
             "Queue"="Transparent" 
+            "RenderType"="Transparent"
         }
-
+        LOD 100
+        Blend SrcAlpha OneMinusSrcAlpha
+        // ZWrite Off
+        //Blend One One
 
         Pass
         {
-           // Cull Off
-           // ZWrite Off
-            Blend One One
+
 
             CGPROGRAM
             #pragma vertex vert

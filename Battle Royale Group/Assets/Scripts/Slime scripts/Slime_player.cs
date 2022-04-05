@@ -34,10 +34,6 @@ public class Slime_player : MonoBehaviour
     public LayerMask groundLayer;
     public Transform feetPos;
 
-    //elevatorTrigger
-    public bool platformCounter;
-    public LayerMask platformTriggerLayer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -105,9 +101,6 @@ public class Slime_player : MonoBehaviour
     private void FixedUpdate(){
         grounded = Physics2D.OverlapCircle(feetPos.position, .3f, groundLayer);
         _animator.SetBool("grounded", grounded);
-
-        //elevatorTrigger
-        platformCounter = Physics2D.OverlapCircle(transform.position, .3f, platformTriggerLayer);
     }
 
     // This section has been replaced by a separate health controller script

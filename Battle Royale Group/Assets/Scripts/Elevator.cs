@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    Slime_player SlimePlayerCode;
-    private bool slimeOn;
+    ElevatorTrigger ElevatorTriggerCode;
     BalletController BalletCode;
     private bool balletOn;
-    
-    public float speed = 0.5f;
-    public float distance = 5;
-    private float startPos;
+
 
     Animator _animator;
 
     void Start()
     {
         _animator = GetComponent<Animator>();
-        slimeOn = false;
+
         balletOn = false;
 
-        SlimePlayerCode = FindObjectOfType<Slime_player>();
+        ElevatorTriggerCode = FindObjectOfType<ElevatorTrigger>();
         BalletCode = FindObjectOfType<BalletController>();
 
         //startPos = transform.position.y;
@@ -32,18 +28,13 @@ public class Elevator : MonoBehaviour
     {
 
 
-        if(SlimePlayerCode.platformCounter == true && slimeOn == false){
-            slimeOn = true;
-            print("Slime"+slimeOn);
-        }
-
         if(BalletCode.platformCounter == true && balletOn == false){
             balletOn = true;
             print("Ballet"+balletOn);
         }
 
 
-        if(slimeOn == true && balletOn == true){
+        if(ElevatorTriggerCode.slimeOn == true && balletOn == true){
             StartCoroutine(moveTime());
         }
         
@@ -65,11 +56,7 @@ public class Elevator : MonoBehaviour
         // Vector2 newPos = transform.position;
         // newPos.y = Mathf.SmoothStep(startPos, startPos+distance, Time.time *speed);
         // transform.position = newPos;
-        _animator.SetTrigger("Move");
+        _animator.SetTrigger("Move1");
         yield return new WaitForSeconds(3f);
-        slimeOn = false;
-        balletOn = false;
-        print("Slime"+slimeOn);
-        print("Ballet"+balletOn);
     }
 }

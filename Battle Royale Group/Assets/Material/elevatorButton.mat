@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: elevator
+  m_Name: elevatorButton
   m_Shader: {fileID: 4800000, guid: 4c9c666644d9f4a78a6ad36d137df51c, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
@@ -101,8 +101,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 0.023529414, g: 0, b: 0, a: 0.31764707}
-    - _Color1: {r: 1, g: 0.9186542, b: 0.41960788, a: 0.40392157}
-    - _Color2: {r: 0.9386792, g: 0.9693396, b: 1, a: 0}
+    - _Color1: {r: 0.76300365, g: 1, b: 0.2028302, a: 0.40392157}
+    - _Color2: {r: 0.96827906, g: 1, b: 0.9372549, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
