@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PowerUpController : MonoBehaviour
 {
@@ -14,13 +16,17 @@ public class PowerUpController : MonoBehaviour
 
     private Timer timer;
 
-    // Start is called before the first frame update
+
+    public float scoreValue = 0;
+    public TextMeshProUGUI scoreText;
+
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
   
@@ -70,6 +76,7 @@ public class PowerUpController : MonoBehaviour
                     Debug.Log("Get 1 score.");
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
+                    scoreValue++;
                     break;
 
                 // If player picks up life collectible
