@@ -6,8 +6,14 @@ public class IceBrick : MonoBehaviour
 {
     Animator _animator;
 
+    public GameObject readMe;
+
+
+
     void Start(){
         _animator = GetComponent<Animator>();
+
+        readMe.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -15,6 +21,13 @@ public class IceBrick : MonoBehaviour
             print("melt");
             StartCoroutine(melt());
             Destroy(other.gameObject);
+        }
+
+        if (other.tag == "Dancer" || other.tag == "Rabbit")
+        {
+            Debug.Log("Player Entered");
+            readMe.SetActive(true);
+
         }
     }
 
