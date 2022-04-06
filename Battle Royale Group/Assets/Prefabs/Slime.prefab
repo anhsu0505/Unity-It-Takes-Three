@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1729207998}
   m_Layer: 7
   m_Name: Slime
-  m_TagString: Player
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1208040086343421634, guid: 3e67fbcce399749cfb85816bd09d7c12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -267,17 +267,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNum: 1
   lifeUI: {fileID: 0}
-  bulletPrefeb: {fileID: 457045113539068599, guid: 2b07ce84714194e4e96caabd7496eff6, type: 3}
+  bulletPrefeb_ice: {fileID: 457045113539068599, guid: 2b07ce84714194e4e96caabd7496eff6, type: 3}
+  bulletPrefeb_fire: {fileID: 457045113539068599, guid: f463490d5652a4c02bf9bfa7650af1a8, type: 3}
   spawnPoint: {fileID: 3003324648781426807}
   grounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   feetPos: {fileID: 3003324649046483283}
-  platformCounter: 0
-  platformTriggerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &3003324649555693828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,7 +317,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9aab43572e400124387431207ad9c1d7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

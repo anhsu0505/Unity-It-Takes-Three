@@ -236,7 +236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108594022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.125, z: 0}
+  m_LocalPosition: {x: 0, y: -1.1996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5497212869453053568}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1021931095}
   m_Layer: 7
   m_Name: BalletJunru
-  m_TagString: Player
+  m_TagString: Dancer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 5b03ce02ca1724582a476d7ef7f1f848, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -373,6 +373,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   feetPos: {fileID: 1108594023}
+  platformCounter: 0
+  platformTriggerLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!70 &1021931089
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -386,8 +390,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011177719, y: 0}
-  m_Size: {x: 0.43584502, y: 2.5}
+  m_Offset: {x: 0.011177719, y: 0.024957418}
+  m_Size: {x: 0.43584502, y: 2.4500852}
   m_Direction: 0
 --- !u!50 &2381482479251216892
 Rigidbody2D:
@@ -405,7 +409,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9aab43572e400124387431207ad9c1d7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

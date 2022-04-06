@@ -95,7 +95,7 @@ public class BalletController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(feetPos.position, .5f, groundLayer);
+        grounded = Physics2D.OverlapCircle(feetPos.position, .1f, groundLayer);
         _animator.SetBool("grounded", grounded);
 
         //elevatorTrigger
