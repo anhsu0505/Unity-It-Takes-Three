@@ -8,6 +8,12 @@ public class Elevator : MonoBehaviour
     BalletController BalletCode;
     private bool balletOn;
 
+    public List<Transform> points;
+    public float moveSpeed;
+    public int currentPoint;
+
+    public Transform platform;
+
 
     Animator _animator;
 
@@ -27,7 +33,6 @@ public class Elevator : MonoBehaviour
     void Update()
     {
 
-
         if(BalletCode.platformCounter == true && balletOn == false){
             balletOn = true;
             print("Ballet"+balletOn);
@@ -35,7 +40,7 @@ public class Elevator : MonoBehaviour
 
 
         if(ElevatorTriggerCode.slimeOn == true && balletOn == true){
-            StartCoroutine(moveTime());
+            elevator2();
         }
         
     }
@@ -58,5 +63,26 @@ public class Elevator : MonoBehaviour
         // transform.position = newPos;
         _animator.SetTrigger("Move1");
         yield return new WaitForSeconds(3f);
+    }
+
+    void elevator2(){
+        print(platform.position);
+        // Move from the current position to the next point
+        platform.position = Vector2.MoveTowards(platform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
+        transform.position = platform.position;
+
+        //If getting close to one point
+        // if (Vector2.Distance(platform.position, points[currentPoint].position) < 0.05f)
+        // {
+        //     Update the current point
+        //     currentPoint++;
+
+        //     If the current point is higher than the number of points
+        //     if (currentPoint >= points.Length)
+        //     {
+        //         Reset to 0
+        //         currentPoint = 0;
+        //     }
+        // }
     }
 }

@@ -80,6 +80,7 @@ public class Slime_player : MonoBehaviour
         if(Input.GetButtonDown(attackBtn)){
             Vector2 bulletDir = new Vector2(transform.localScale.x,0);
             bulletDir *= bulletForce;
+            bulletPrefeb_ice.transform.localScale = transform.localScale;
            GameObject newBullet = Instantiate(bulletPrefeb_ice, spawnPoint.position, Quaternion.identity);
            newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
 
@@ -87,10 +88,11 @@ public class Slime_player : MonoBehaviour
         }
 
         if(Input.GetButtonDown(attackFire)){
-            Vector2 bulletDir = new Vector2(transform.localScale.x,0);
-            bulletDir *= bulletForce;
-           GameObject newBullet = Instantiate(bulletPrefeb_fire, spawnPoint.position, Quaternion.identity);
-           newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
+            Vector2 bulletDir_f = new Vector2(transform.localScale.x,0);
+            bulletDir_f *= bulletForce;
+            bulletPrefeb_fire.transform.localScale = transform.localScale;
+           GameObject newBullet_f = Instantiate(bulletPrefeb_fire, spawnPoint.position, Quaternion.identity);
+           newBullet_f.GetComponent<Rigidbody2D>().AddForce(bulletDir_f);
 
            _animator.SetTrigger("fireShoot");
         }
