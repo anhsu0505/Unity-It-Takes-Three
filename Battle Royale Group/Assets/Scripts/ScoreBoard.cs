@@ -6,18 +6,25 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public float scoreValue = 0;
+    int score = 0;
     public TextMeshProUGUI scoreText;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void Start()
     {
-        if (other.tag == "Rabbit" || other.tag == "Dancer" || other.tag == "Slime")
-        {
-            Debug.Log("Player Pickedup");
-            scoreValue++;
-
-        }
+        scoreText.text = "Score: " +score;
     }
+
+    
+     private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Rabbit" || other.tag == "Dancer" || other.tag == "Slime")
+            {
+                Debug.Log("Player Pickedup");
+                score += 1;
+                scoreText.text = "Score: " + score;
+        }
+        }
+    
 
 
 }
