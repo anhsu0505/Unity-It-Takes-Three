@@ -29,6 +29,7 @@ public class ElevatorButton : MonoBehaviour
 
     void FixedUpdate(){
         if(ifMove == true){
+            print("botton down, move elevator");
             rend.material.color = colorToTurnTo;
             elevatorMove();
         }
