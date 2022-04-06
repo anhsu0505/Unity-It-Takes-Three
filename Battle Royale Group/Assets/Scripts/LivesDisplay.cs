@@ -27,17 +27,23 @@ public class LivesDisplay : MonoBehaviour
         {
             // If player has 3 lives, do nothing
             case 3:
+                heart3.SetActive(true);
+                heart2.SetActive(true);
+                heart1.SetActive(true);
                 break;
 
             // If player has 2 lives, remove 1 heart
             case 2:
                 heart3.SetActive(false);
+                heart2.SetActive(true);
+                heart1.SetActive(true);
                 break;
 
             // If player has 1 lives, remove 2 hearts
             case 1:
                 heart3.SetActive(false);
                 heart2.SetActive(false);
+                heart1.SetActive(true);
                 break;
 
             // If player has 0 lives, remove all hearts

@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 235106847692583360}
   - component: {fileID: 235106847692583362}
   - component: {fileID: 235106847692583361}
-  - component: {fileID: 235106847692583363}
+  - component: {fileID: 852271816}
   m_Layer: 5
   m_Name: Rabbit Lives Bar
   m_TagString: Untagged
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &235106847692583363
+--- !u!114 &852271816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 235106847692583423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402e6002f8c230499ea9abed43b9015, type: 3}
+  m_Script: {fileID: 11500000, guid: 2335a04a82af3be4fbd62f53635b689a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   heart1: {fileID: 235106847181526668}

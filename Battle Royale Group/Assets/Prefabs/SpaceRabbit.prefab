@@ -227,8 +227,8 @@ GameObject:
   - component: {fileID: 6017295724424322592}
   - component: {fileID: 6017295724424322597}
   - component: {fileID: 6017295724424322595}
-  - component: {fileID: 6017295724424322593}
   - component: {fileID: 305156225}
+  - component: {fileID: 862916269}
   m_Layer: 7
   m_Name: SpaceRabbit
   m_TagString: Rabbit
@@ -412,26 +412,6 @@ MonoBehaviour:
   bulletPos: {fileID: 6017295725450266648}
   knockBackLength: 0.25
   knockBackForce: 2.5
---- !u!114 &6017295724424322593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6017295724424322777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36eb805404402a641b1c2d57c4810b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  maxLives: 3
-  currentLives: 0
-  healthBar: {fileID: 7044645364971908463}
-  livesDisplay: {fileID: 0}
-  isAlive: 0
-  invincibleLength: 1
-  launchPos: {fileID: 0}
 --- !u!114 &305156225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +427,29 @@ MonoBehaviour:
   currentPowerUp: 0
   invinciblePowerUp: 0
   invincibleDisplay: {fileID: 1421680415}
+  scoreValue: 0
+  scoreText: {fileID: 0}
+  livesDisplay: {fileID: 0}
+--- !u!114 &862916269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017295724424322777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f217ee1986c9bf04781330c085eb2e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  maxLives: 3
+  currentLives: 0
+  healthBar: {fileID: 7044645364971908463}
+  livesDisplay: {fileID: 0}
+  isAlive: 0
+  invincibleLength: 1
+  launchPos: {fileID: 0}
 --- !u!1 &6017295725450266651
 GameObject:
   m_ObjectHideFlags: 0

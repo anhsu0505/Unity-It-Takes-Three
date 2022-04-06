@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator ShootBullets(float spawnRate)
     {
-        while (SpaceRabbitHealth.instance.isAlive && playerDetected)
+        while (playerDetected)
         {
             yield return new WaitForSeconds(spawnRate);
             // Instantiate new bullet

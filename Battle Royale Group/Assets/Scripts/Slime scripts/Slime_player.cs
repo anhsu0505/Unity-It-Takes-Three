@@ -15,10 +15,10 @@ public class Slime_player : MonoBehaviour
     int speed = 5;
     int JumpForce = 600;
     int bulletForce = 100;
-    int health = 6;
+    //int health = 6;
 
-    bool alive = true;
-    bool hurt = false;
+    //bool alive = true;
+    //bool hurt = false;
 
     public TextMeshProUGUI lifeUI;
 

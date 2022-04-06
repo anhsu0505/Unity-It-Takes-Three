@@ -18,14 +18,12 @@ public class HealthController : MonoBehaviour
 
     public bool isAlive;
 
-    bool hurt = false;
-
     public float invincibleLength;
     private float invincibleCounter;
 
     private SpriteRenderer playerSR;
 
-    public GameObject player;
+    //public GameObject player;
 
     public Transform launchPos;
 
@@ -83,7 +81,15 @@ public class HealthController : MonoBehaviour
         {
             if (isAlive && currentHealth > 0)
             {
-                StartCoroutine(GotHurt());
+                if (gameObject.name == "SpaceRabbit")
+                {
+                    // Knock player back
+                    SpaceRabbitController.instance.KnockBack();
+                }
+                else
+                {
+                    StartCoroutine(GotHurt());
+                }
                 // Reduce player's health
                 currentHealth -= damage;
                 // Set the health bar to reflect current health
@@ -92,7 +98,7 @@ public class HealthController : MonoBehaviour
                 invincibleCounter = invincibleLength;
                 // Display invincibility - reduce player avatar's opacity
                 playerSR.color = new Color(playerSR.color.r, playerSR.color.g, playerSR.color.b, 0.5f);
-                
+                // If the player is space rabbit 
             }
 
             if (currentHealth <= 0 && currentLives > 0)
@@ -103,7 +109,14 @@ public class HealthController : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            StartCoroutine(Die());
+            if (gameObject.name == "SpaceRabbit")
+            {
+                Death();
+            }
+            else
+            {
+                StartCoroutine(Die());
+            }
         }
     }
 
@@ -165,5 +178,14 @@ public class HealthController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         // Remove player from scene
         gameObject.SetActive(false);
+    }
+    private void Death()
+    {
+        // Set current lives to 0
+        currentLives = 0;
+        isAlive = false;
+        // Remove player from scene
+        gameObject.SetActive(false);
+        Debug.Log("Game Over.");
     }
 }

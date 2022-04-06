@@ -16,14 +16,14 @@ public class PowerUpController : MonoBehaviour
 
     private Timer timer;
 
+    private HealthController healthController;
 
-    public float scoreValue = 0;
-    public TextMeshProUGUI scoreText;
-
+    public LivesDisplay livesDisplay;
 
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        healthController = GetComponent<HealthController>();
     }
 
 
@@ -76,12 +76,18 @@ public class PowerUpController : MonoBehaviour
                     Debug.Log("Get 1 score.");
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
-                    scoreValue++;
+                    ScoreBoard.instance.DisplayScore();
                     break;
 
                 // If player picks up life collectible
                 case PowerUpType.AddLife:
                     Debug.Log("Get 1 extra life if player has less than 3 lives.");
+                    if (healthController.currentLives < 3 && healthController.currentLives > 0)
+                    {
+                        healthController.currentLives++;
+                        // Update lives bar display
+                        livesDisplay.UpdateLivesDisplay();
+                    }
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
                     break;
