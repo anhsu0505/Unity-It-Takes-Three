@@ -5,7 +5,6 @@ using UnityEngine;
 public class ElevatorTrigger : MonoBehaviour
 {
     public GameObject elevator;
-    public float distance;
 
     public List<Transform> points;
     public float moveSpeed;
@@ -19,9 +18,8 @@ public class ElevatorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2 (elevator.transform.position.x, elevator.transform.position.y+distance);
-        if( slimeOn==true && dancerOn == true ){
-            elevator2();
+        if( slimeOn==true && dancerOn == true && rabbitOn == true ){
+            elevatorMove();
         }
 
     }
@@ -33,11 +31,14 @@ public class ElevatorTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Dancer")){
             dancerOn = true;
         }
+        if(other.gameObject.CompareTag("Rabbit")){
+            rabbitOn = true;
+        }
     }
 
 
 
-    void elevator2(){
+    void elevatorMove(){
         // print(platform.position);
         // Move from the current position to the next point
         elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
