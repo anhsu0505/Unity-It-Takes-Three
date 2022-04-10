@@ -6,6 +6,8 @@ using TMPro;
 
 public class PowerUpController : MonoBehaviour
 {
+    private CollectiblesAudio CollectiblesAudioCode;
+
     public PowerUpType currentPowerUp = PowerUpType.None;
 
     public bool invinciblePowerUp = false;
@@ -20,10 +22,16 @@ public class PowerUpController : MonoBehaviour
 
     public LivesDisplay livesDisplay;
 
+    //add sounds
+    // AudioSource _audioSource;
+    // public AudioClip Collectibles_heal;
+
     void Start()
     {
+        CollectiblesAudioCode = FindObjectOfType<CollectiblesAudio>();
         timer = FindObjectOfType<Timer>();
         healthController = GetComponent<HealthController>();
+        // _audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -38,8 +46,10 @@ public class PowerUpController : MonoBehaviour
         {
             // Check the type of collectible player picks up
             currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
+            //add sounds
+            CollectiblesAudioCode.Play();
             // Destroy the collectible
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
 
             // Check player's current lives
             switch (currentPowerUp)
