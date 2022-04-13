@@ -111158,6 +111158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleSounds_heal: {fileID: 8300000, guid: 9a5e6409f263e4dab8db97118a446e68, type: 3}
   collectibleSounds_score: {fileID: 8300000, guid: cf542f909c4cf451d98ebc299a80fecf, type: 3}
+  waterTransSound: {fileID: 8300000, guid: 43f914bd4d5ff4d038408b162d7fd94f, type: 3}
 --- !u!4 &1960708122
 Transform:
   m_ObjectHideFlags: 0
