@@ -6,6 +6,7 @@ using TMPro;
 
 public class PowerUpController : MonoBehaviour
 {
+
     public PowerUpType currentPowerUp = PowerUpType.None;
 
     public bool invinciblePowerUp = false;
