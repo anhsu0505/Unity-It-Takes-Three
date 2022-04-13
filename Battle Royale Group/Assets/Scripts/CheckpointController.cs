@@ -6,7 +6,7 @@ public class CheckpointController : MonoBehaviour
 {
     public static CheckpointController instance;
 
-    public Checkpoint[] checkPoints;
+    private Checkpoint[] checkPoints;
 
     public Vector3 spawnPoint;
 
@@ -44,6 +44,5 @@ public class CheckpointController : MonoBehaviour
     public void SetSpawnPoint(Vector3 newSpawnPoint)
     {
         spawnPoint = newSpawnPoint;
-        //Debug.Log(spawnPoint);
     }
 }

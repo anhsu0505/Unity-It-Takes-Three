@@ -18,19 +18,7 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && gameObject.CompareTag("Bullet"))
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-
-        if (other.CompareTag("Swan") && gameObject.CompareTag("Shoe"))
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-
-        if (other.CompareTag("Plant") && gameObject.CompareTag("fire_bullet"))
+        if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);

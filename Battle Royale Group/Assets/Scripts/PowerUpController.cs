@@ -6,7 +6,6 @@ using TMPro;
 
 public class PowerUpController : MonoBehaviour
 {
-
     public PowerUpType currentPowerUp = PowerUpType.None;
 
     public bool invinciblePowerUp = false;
@@ -21,15 +20,10 @@ public class PowerUpController : MonoBehaviour
 
     public LivesDisplay livesDisplay;
 
-    //sounds
-    private SoundsPlayer soundsPlayerCode;
-
-
     void Start()
     {
         timer = FindObjectOfType<Timer>();
         healthController = GetComponent<HealthController>();
-        soundsPlayerCode = FindObjectOfType<SoundsPlayer>();
     }
 
 
@@ -44,8 +38,7 @@ public class PowerUpController : MonoBehaviour
         {
             // Check the type of collectible player picks up
             currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
-
-            //Destroy the collectible 
+            // Destroy the collectible
             Destroy(other.gameObject);
 
             // Check player's current lives
@@ -68,8 +61,6 @@ public class PowerUpController : MonoBehaviour
 
                     // Start invincible counter
                     invincibleCounter = StartCoroutine(InvincibleCounterRoutine());
-                    //play sound
-                    soundsPlayerCode.PlayInvincibleSound();
                     break;
 
                 // If player picks up time collectible
@@ -78,8 +69,6 @@ public class PowerUpController : MonoBehaviour
                     timer.timeValue += 5;
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
-                    //play sound
-                    soundsPlayerCode.PlayHealSound();
                     break;
 
                 // If player picks up score collectible
@@ -88,8 +77,6 @@ public class PowerUpController : MonoBehaviour
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
                     ScoreBoard.instance.DisplayScore();
-                    //play sound
-                    soundsPlayerCode.PlayScoreSound();
                     break;
 
                 // If player picks up life collectible
@@ -103,8 +90,6 @@ public class PowerUpController : MonoBehaviour
                     }
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
-                    //play sound
-                    soundsPlayerCode.PlayHealSound();
                     break;
 
                 // Any other case

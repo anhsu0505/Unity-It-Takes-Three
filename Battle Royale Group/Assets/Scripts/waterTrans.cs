@@ -6,21 +6,12 @@ public class waterTrans : MonoBehaviour
 {
     public GameObject icePlatform;
 
-    //add sound
-    SoundsPlayer soundsPlayerCode;
-
-    void Start(){
-        soundsPlayerCode = FindObjectOfType<SoundsPlayer>();
-    }
-
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("ice_bullet")){
-            soundsPlayerCode.PlayWaterSound();
-            Destroy(other.gameObject);
+            //print("!!!!");
             gameObject.SetActive(false);
+            Destroy(other.gameObject);
             icePlatform.gameObject.SetActive(true);
-
         }
     }
-
 }

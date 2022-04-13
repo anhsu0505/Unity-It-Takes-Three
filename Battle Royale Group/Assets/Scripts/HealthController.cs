@@ -25,8 +25,6 @@ public class HealthController : MonoBehaviour
 
     //public GameObject player;
 
-    public Transform launchPos;
-
     private PowerUpController powerUpController;
 
     private Animator _animator;
@@ -64,14 +62,21 @@ public class HealthController : MonoBehaviour
         }
 
         // If player falls
-        if (transform.position.y < -20 && currentLives > 0)
+        if (transform.position.y < -15 && currentLives > 0)
         {
             LoseLives();
         }
 
         if (currentLives <= 0)
         {
-            StartCoroutine(Die());
+            if (gameObject.name == "SpaceRabbit")
+            {
+                Death();
+            }
+            else
+            {
+                StartCoroutine(Die());
+            }
         }
     }
 
@@ -88,6 +93,7 @@ public class HealthController : MonoBehaviour
                 }
                 else
                 {
+                    // Display hurt animation
                     StartCoroutine(GotHurt());
                 }
                 // Reduce player's health
@@ -143,24 +149,17 @@ public class HealthController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // If player touches an enemy
-        if (other.CompareTag("Enemy") || other.CompareTag("Swan"))
+        if (other.CompareTag("Enemy"))
         {
             // Take damage
             TakeDamage(3);
         }
 
-        // If player touches an enemy's poison bullet
+        // If player touches an enemy
         if (other.CompareTag("Poison"))
         {
             // Take damage
             TakeDamage(1);
-        }
-
-        // If player touches a poison plant
-        if (other.CompareTag("Plant"))
-        {
-            // Take damage
-            TakeDamage(2);
         }
     }
 

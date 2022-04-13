@@ -50,24 +50,6 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Slime"))
-        {
-            slimeDetected = false;
-        }
-
-        if (other.CompareTag("Dancer"))
-        {
-            dancerDetected = false;
-        }
-
-        if (other.CompareTag("Rabbit"))
-        {
-            rabbitDetected = false;
-        }
-    }
-
 
     public void ResetCheckPoint()
     {

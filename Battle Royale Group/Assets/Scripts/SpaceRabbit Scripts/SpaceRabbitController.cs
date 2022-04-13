@@ -38,10 +38,6 @@ public class SpaceRabbitController : MonoBehaviour
     private float knockBackCounter;
 
     private bool hurt;
-
-    //add sounds
-    AudioSource _audioSource;
-    public AudioClip shootSound;
     
 
     private void Awake()
@@ -60,9 +56,6 @@ public class SpaceRabbitController : MonoBehaviour
         attackBtn = "Attack"+playerNum;
         jumpBtn = "Jump" + playerNum;
         xInputAxis = "Horizontal" + playerNum;
-
-        //add sound
-        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -149,8 +142,6 @@ public class SpaceRabbitController : MonoBehaviour
             GameObject newBullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
             // Bullet flies
             newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir * bulletForce, ForceMode2D.Impulse);
-            //sound
-            _audioSource.PlayOneShot(shootSound);
         }
     }
 

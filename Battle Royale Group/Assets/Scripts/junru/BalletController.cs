@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class BalletController : MonoBehaviour
 {
-    //sound
-    AudioSource _audioSource;
-    public AudioClip shootSound;
-
     //for multiplayer
     public int playerNum = 2;
     string attackBtn;
@@ -54,9 +50,6 @@ public class BalletController : MonoBehaviour
         attackBtn = "Attack"+playerNum;
         jumpBtn = "Jump" + playerNum;
         xInputAxis = "Horizontal" + playerNum;
-
-        //sound
-        _audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -94,9 +87,6 @@ public class BalletController : MonoBehaviour
                 bulletDir *= bulletForce;
                 GameObject newBullet = Instantiate(bulletPrefeb, spawnPoint.position, Quaternion.identity);
                 newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
-
-                //sound
-                _audioSource.PlayOneShot(shootSound);
 
                 _animator.SetTrigger("shoot");
             }
