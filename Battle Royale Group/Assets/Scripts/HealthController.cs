@@ -135,8 +135,8 @@ public class HealthController : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             // Update lives bar display
             livesDisplay.UpdateLivesDisplay();
-            // Reset player's position
-            //transform.position = launchPos.position;
+            // Respawn player
+            LevelManager.instance.RespawnPlayer();
         }
     }
 
