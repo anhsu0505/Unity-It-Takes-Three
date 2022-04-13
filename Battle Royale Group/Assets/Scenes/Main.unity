@@ -2783,7 +2783,15 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
+<<<<<<< Updated upstream
   orthographic size: 6.602433
+=======
+<<<<<<< Updated upstream
+  orthographic size: 6.597829
+=======
+  orthographic size: 6.6069345
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2806,7 +2814,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0.012232622, y: 0.044702496, z: 0.000547417, w: 0.9989253}
+  m_LocalRotation: {x: -0.012232601, y: 0.044702563, z: 0.00054741703, w: 0.9989253}
   m_LocalPosition: {x: -1.9700764, y: -2.9637494, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4821,7 +4829,8 @@ PrefabInstance:
       propertyPath: collectiblesSounds
       value: 
       objectReference: {fileID: 8300000, guid: cf542f909c4cf451d98ebc299a80fecf, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1263635420, guid: 1c9be569cf473334ba9e57a9a4873d67, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c9be569cf473334ba9e57a9a4873d67, type: 3}
 --- !u!1 &924523800
 GameObject:
@@ -4882,7 +4891,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924523800}
-  m_LocalRotation: {x: -0.012232622, y: 0.044702496, z: 0.000547417, w: 0.9989253}
+  m_LocalRotation: {x: -0.012232601, y: 0.044702563, z: 0.00054741703, w: 0.9989253}
   m_LocalPosition: {x: -1.9700764, y: -2.9637494, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
