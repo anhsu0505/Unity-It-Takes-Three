@@ -8,6 +8,7 @@ public class SoundsPlayer : MonoBehaviour
     public AudioClip collectibleSounds_heal;
     public AudioClip collectibleSounds_score;
     public AudioClip waterTransSound;
+    public AudioClip collectibleSounds_invincible;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,10 @@ public class SoundsPlayer : MonoBehaviour
 
     public void PlayScoreSound(){
         _audioSource.PlayOneShot(collectibleSounds_score);
+    }
+
+    public void PlayInvincibleSound(){
+        _audioSource.PlayOneShot(collectibleSounds_invincible);
     }
 
     public void PlayWaterSound(){

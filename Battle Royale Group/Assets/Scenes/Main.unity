@@ -3475,6 +3475,10 @@ PrefabInstance:
       propertyPath: elevator
       value: 
       objectReference: {fileID: 561705690}
+    - target: {fileID: 7498055451177899835, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4570b65bd659242a897037dc13343ae8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
 --- !u!4 &668675900 stripped
@@ -3681,6 +3685,10 @@ PrefabInstance:
       propertyPath: elevator
       value: 
       objectReference: {fileID: 511757264}
+    - target: {fileID: 7498055451177899835, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4570b65bd659242a897037dc13343ae8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
 --- !u!4 &731600007 stripped
@@ -4289,7 +4297,7 @@ MonoBehaviour:
   m_CenterOnActivate: 1
   m_GroupFramingSize: 0.5
   m_FramingMode: 2
-  m_FrameDamping: 2
+  m_FrameDamping: 20
   m_AdjustmentMode: 0
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
@@ -111987,6 +111995,10 @@ PrefabInstance:
       propertyPath: elevator
       value: 
       objectReference: {fileID: 791979520}
+    - target: {fileID: 7498055451177899835, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4570b65bd659242a897037dc13343ae8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987920e68229a4bb3aa011d890478e6d, type: 3}
 --- !u!4 &9017843209260681589 stripped

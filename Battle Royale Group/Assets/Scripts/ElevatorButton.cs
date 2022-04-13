@@ -18,15 +18,20 @@ public class ElevatorButton : MonoBehaviour
     [SerializeField]
     private Color defaultColor = Color.white;
 
+    AudioSource _audioSource;
+    public AudioClip buttonSound;
+
     void Start(){
         rend = GetComponent<Renderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
 
     // Start is called before the first frame update
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.CompareTag("Rabbit")||other.gameObject.CompareTag("Slime")||other.gameObject.CompareTag("Dancer")){
+        if((other.gameObject.CompareTag("Rabbit")||other.gameObject.CompareTag("Slime")||other.gameObject.CompareTag("Dancer"))&&ifMove==false){
             ifMove = true;
+            print("botton down, move elevator");
         }
         else{
             ifMove = false;
@@ -35,7 +40,6 @@ public class ElevatorButton : MonoBehaviour
 
     void FixedUpdate(){
         if(ifMove == true){
-            print("botton down, move elevator");
             rend.material.color = colorToTurnTo;
             elevatorMoveUp();
             StartCoroutine(elevatorMoveDown());
@@ -46,6 +50,7 @@ public class ElevatorButton : MonoBehaviour
     void elevatorMoveUp(){
         // print(platform.position);
         // Move from the current position to the next point
+        _audioSource.PlayOneShot(buttonSound);
         elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point2.position, moveSpeed * Time.deltaTime);
     }
 

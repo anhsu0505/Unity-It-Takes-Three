@@ -68,6 +68,8 @@ public class PowerUpController : MonoBehaviour
 
                     // Start invincible counter
                     invincibleCounter = StartCoroutine(InvincibleCounterRoutine());
+                    //play sound
+                    soundsPlayerCode.PlayInvincibleSound();
                     break;
 
                 // If player picks up time collectible
