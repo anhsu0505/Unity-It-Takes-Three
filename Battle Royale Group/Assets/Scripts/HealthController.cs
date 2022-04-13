@@ -25,6 +25,8 @@ public class HealthController : MonoBehaviour
 
     //public GameObject player;
 
+    public Transform launchPos;
+
     private PowerUpController powerUpController;
 
     private Animator _animator;
@@ -62,21 +64,14 @@ public class HealthController : MonoBehaviour
         }
 
         // If player falls
-        if (transform.position.y < -15 && currentLives > 0)
+        if (transform.position.y < -20 && currentLives > 0)
         {
             LoseLives();
         }
 
         if (currentLives <= 0)
         {
-            if (gameObject.name == "SpaceRabbit")
-            {
-                Death();
-            }
-            else
-            {
-                StartCoroutine(Die());
-            }
+            StartCoroutine(Die());
         }
     }
 
@@ -93,7 +88,6 @@ public class HealthController : MonoBehaviour
                 }
                 else
                 {
-                    // Display hurt animation
                     StartCoroutine(GotHurt());
                 }
                 // Reduce player's health
@@ -141,8 +135,8 @@ public class HealthController : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             // Update lives bar display
             livesDisplay.UpdateLivesDisplay();
-            // Respawn player
-            LevelManager.instance.RespawnPlayer();
+            // Reset player's position
+            //transform.position = launchPos.position;
         }
     }
 
