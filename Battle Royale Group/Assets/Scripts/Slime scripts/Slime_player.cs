@@ -34,6 +34,11 @@ public class Slime_player : MonoBehaviour
     public LayerMask groundLayer;
     public Transform feetPos;
 
+    //add sounds
+    AudioSource _audioSource;
+    public AudioClip shootSound_ice;
+    public AudioClip shootSound_fire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,22 +50,14 @@ public class Slime_player : MonoBehaviour
         jumpBtn = "Jump" + playerNum;
         xInputAxis = "Horizontal" + playerNum;
 
-        // lifeUI.text = "Life: "+health;
+        //add sounds
+        _audioSource = GetComponent<AudioSource>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if(!alive || hurt){
-        //     return;//exit it
-        // }
-
-        //if fall down
-        // if(transform.position.y<-10){
-        //     alive = !alive;
-        //     SceneManager.LoadScene("GameOver");
-        // }
 
         float xSpeed = Input.GetAxis(xInputAxis)*speed;
 
@@ -84,6 +81,9 @@ public class Slime_player : MonoBehaviour
            GameObject newBullet = Instantiate(bulletPrefeb_ice, spawnPoint.position, Quaternion.identity);
            newBullet.GetComponent<Rigidbody2D>().AddForce(bulletDir);
 
+           //sound
+           _audioSource.PlayOneShot(shootSound_ice);
+
            _animator.SetTrigger("shoot");
         }
 
@@ -93,6 +93,9 @@ public class Slime_player : MonoBehaviour
             bulletPrefeb_fire.transform.localScale = transform.localScale;
            GameObject newBullet_f = Instantiate(bulletPrefeb_fire, spawnPoint.position, Quaternion.identity);
            newBullet_f.GetComponent<Rigidbody2D>().AddForce(bulletDir_f);
+
+            //sound
+           _audioSource.PlayOneShot(shootSound_fire);
 
            _animator.SetTrigger("fireShoot");
         }

@@ -9,11 +9,14 @@ public class ElevatorButton : MonoBehaviour
     public bool ifMove = false;
     public GameObject elevator;
 
-    public Transform point;
+    public Transform point2;
+    public Transform point1;
     public float moveSpeed;
 
     [SerializeField]
     private Color colorToTurnTo = Color.white;
+    [SerializeField]
+    private Color defaultColor = Color.white;
 
     void Start(){
         rend = GetComponent<Renderer>();
@@ -25,20 +28,35 @@ public class ElevatorButton : MonoBehaviour
         if(other.gameObject.CompareTag("Rabbit")||other.gameObject.CompareTag("Slime")||other.gameObject.CompareTag("Dancer")){
             ifMove = true;
         }
+        else{
+            ifMove = false;
+        }
     }
 
     void FixedUpdate(){
         if(ifMove == true){
             print("botton down, move elevator");
             rend.material.color = colorToTurnTo;
-            elevatorMove();
+            elevatorMoveUp();
+            StartCoroutine(elevatorMoveDown());
         }
     }
 
 
-    void elevatorMove(){
+    void elevatorMoveUp(){
         // print(platform.position);
         // Move from the current position to the next point
-        elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point.position, moveSpeed * Time.deltaTime);
+        elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point2.position, moveSpeed * Time.deltaTime);
     }
+
+    IEnumerator elevatorMoveDown(){
+        yield return new WaitForSeconds(10);
+        // print("point1="+point1.position);
+        // print("elevator="+elevator.transform.position);
+        ifMove = false;
+        rend.material.color = defaultColor;
+        // Move from the current position to the next point
+        elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point1.position, moveSpeed * Time.deltaTime);
+    }
+
 }

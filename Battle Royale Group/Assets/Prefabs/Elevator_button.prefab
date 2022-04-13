@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384080312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11847448, y: 2.63, z: -169.89674}
+  m_LocalPosition: {x: -0.11847448, y: 12.37, z: -169.89674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525490101263097111}
@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 2015659877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.010000229, y: -1.1500001, z: 0}
-  m_LocalScale: {x: 3.7765236, y: 0.146875, z: 1}
+  m_LocalScale: {x: 3.776524, y: 0.475, z: 1}
   m_Children: []
   m_Father: {fileID: 1525490101263097111}
   m_RootOrder: 1
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.9245283, g: 0.67305917, b: 0.004360993, a: 1}
+  m_Color: {r: 0.7428282, g: 0.9245283, b: 0.3270737, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525490101263097111}
   m_Layer: 0
-  m_Name: 'Elevator '
+  m_Name: Elevator_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,6 @@ GameObject:
   - component: {fileID: 1525490101449384345}
   - component: {fileID: 1525490101449384350}
   - component: {fileID: 1525490101449384351}
-  - component: {fileID: 1525490101449384348}
   - component: {fileID: 129261507}
   m_Layer: 8
   m_Name: Square (3)
@@ -274,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525490101449384338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.68, z: 0}
+  m_LocalPosition: {x: -0.008, y: -0.511, z: 0}
   m_LocalScale: {x: 3.7765236, y: 0.8032915, z: 1}
   m_Children: []
   m_Father: {fileID: 1525490101263097111}
@@ -378,26 +377,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1525490101449384348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525490101449384338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f339d2340c0564c5bbebe599ddcd26cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elevator: {fileID: 2015659877}
-  points:
-  - {fileID: 1384080313}
-  moveSpeed: 2
-  currentPoint: 0
-  slimeOn: 0
-  dancerOn: 0
-  rabbitOn: 0
 --- !u!114 &129261507
 MonoBehaviour:
   m_ObjectHideFlags: 0

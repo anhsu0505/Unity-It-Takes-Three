@@ -5,6 +5,8 @@ using UnityEngine;
 public class IceBrick : MonoBehaviour
 {
     Animator _animator;
+    AudioSource _audioSource;
+    public AudioClip meltSound;
 
     public GameObject readMe;
 
@@ -12,6 +14,7 @@ public class IceBrick : MonoBehaviour
 
     void Start(){
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         readMe.SetActive(false);
     }
@@ -19,6 +22,7 @@ public class IceBrick : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("fire_bullet")){
             print("melt");
+            _audioSource.PlayOneShot(meltSound);
             StartCoroutine(melt());
             Destroy(other.gameObject);
         }
