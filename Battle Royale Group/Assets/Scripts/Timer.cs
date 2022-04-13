@@ -7,15 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer instance;
+
     public float timeValue = 90;
     public TextMeshProUGUI timerText;
 
-    public GameObject gameOver;
+    //public GameObject gameOver;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        gameOver.SetActive(false);
+        //gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,7 +45,8 @@ public class Timer : MonoBehaviour
             // If timer reaches 0
             timeValue = 0;
             Debug.Log("Game Over!");
-            gameOver.SetActive(true);
+            //gameOver.SetActive(true);
+            LevelManager.instance.GameOver();
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
