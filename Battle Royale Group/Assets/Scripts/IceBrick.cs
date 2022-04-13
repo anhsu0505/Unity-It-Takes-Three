@@ -8,15 +8,10 @@ public class IceBrick : MonoBehaviour
     AudioSource _audioSource;
     public AudioClip meltSound;
 
-    public GameObject readMe;
-
-
 
     void Start(){
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-
-        readMe.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -25,13 +20,6 @@ public class IceBrick : MonoBehaviour
             _audioSource.PlayOneShot(meltSound);
             StartCoroutine(melt());
             Destroy(other.gameObject);
-        }
-
-        if (other.tag == "Dancer" || other.tag == "Rabbit")
-        {
-            Debug.Log("Player Entered");
-            readMe.SetActive(true);
-
         }
     }
 
