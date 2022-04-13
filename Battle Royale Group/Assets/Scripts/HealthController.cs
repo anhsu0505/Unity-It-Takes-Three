@@ -143,17 +143,24 @@ public class HealthController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // If player touches an enemy
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("Swan"))
         {
             // Take damage
             TakeDamage(3);
         }
 
-        // If player touches an enemy
+        // If player touches an enemy's poison bullet
         if (other.CompareTag("Poison"))
         {
             // Take damage
             TakeDamage(1);
+        }
+
+        // If player touches a poison plant
+        if (other.CompareTag("Plant"))
+        {
+            // Take damage
+            TakeDamage(2);
         }
     }
 

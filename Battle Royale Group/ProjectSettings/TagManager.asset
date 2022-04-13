@@ -17,6 +17,9 @@ TagManager:
   - Slime
   - Dancer
   - Rabbit
+  - Swan
+  - Shoe
+  - Plant
   layers:
   - Default
   - TransparentFX

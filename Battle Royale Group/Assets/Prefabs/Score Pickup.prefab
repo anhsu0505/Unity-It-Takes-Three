@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3828638805821006649}
   - component: {fileID: 1137657677}
   - component: {fileID: 1263635421}
-  - component: {fileID: 1263635420}
   m_Layer: 0
   m_Name: Score Pickup
   m_TagString: PickUp
@@ -236,16 +235,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1263635420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287700265893439620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3b8517c5a7364f2b82b383c837b428f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectiblesSounds: {fileID: 8300000, guid: cf542f909c4cf451d98ebc299a80fecf, type: 3}

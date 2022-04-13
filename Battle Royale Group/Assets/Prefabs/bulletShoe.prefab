@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: -310950645761371171}
   - component: {fileID: -1622997979189986768}
   - component: {fileID: -1618001718141738079}
+  - component: {fileID: 5071468137117182640}
   m_Layer: 0
   m_Name: bulletShoe
-  m_TagString: Untagged
+  m_TagString: Shoe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,3 +146,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5071468137117182640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097062868211040304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76d15db3f3ed034b9d353c8f8e2d665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
