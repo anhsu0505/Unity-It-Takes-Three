@@ -348,6 +348,7 @@ MonoBehaviour:
   invinciblePowerUp: 0
   invincibleDisplay: {fileID: 1421680415}
   livesDisplay: {fileID: 0}
+  healthBar: {fileID: 7044645364971908463}
   pickupEffect: {fileID: 6962616253095731100, guid: 37b6a55117ce52c42a42c68a8bb9fc58, type: 3}
 --- !u!114 &862916269
 MonoBehaviour:
@@ -364,6 +365,7 @@ MonoBehaviour:
   maxHealth: 10
   maxLives: 3
   currentLives: 0
+  currentHealth: 0
   healthBar: {fileID: 7044645364971908463}
   livesDisplay: {fileID: 0}
   isAlive: 0

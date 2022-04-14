@@ -10,7 +10,7 @@ public class HealthController : MonoBehaviour
 
     public int currentLives;
 
-    private int currentHealth;
+    public int currentHealth;
 
     public HealthBar healthBar;
 

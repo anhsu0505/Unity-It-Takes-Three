@@ -21,6 +21,8 @@ public class PowerUpController : MonoBehaviour
 
     public LivesDisplay livesDisplay;
 
+    public HealthBar healthBar;
+
     //sounds
     private SoundsPlayer soundsPlayerCode;
 
@@ -98,11 +100,19 @@ public class PowerUpController : MonoBehaviour
                 // If player picks up life collectible
                 case PowerUpType.AddLife:
                     Debug.Log("Get 1 extra life if player has less than 3 lives.");
-                    if (healthController.currentLives < 3 && healthController.currentLives > 0)
+                    // Get 1 extra life if player has less than 3 lives and health is max
+                    if (healthController.currentLives < 3 && healthController.currentLives > 0 && healthController.currentHealth == healthController.maxHealth)
                     {
                         healthController.currentLives++;
                         // Update lives bar display
                         livesDisplay.UpdateLivesDisplay();
+                    }
+                    // Get more health if health is less than max
+                    if (healthController.currentHealth < healthController.maxHealth)
+                    {
+                        healthController.currentHealth++;
+                        // Set the health bar to reflect current health
+                        healthBar.SetHealth(healthController.currentHealth);
                     }
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
