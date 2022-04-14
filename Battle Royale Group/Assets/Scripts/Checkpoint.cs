@@ -32,6 +32,7 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+    // Check if players all arrived at the checkpoint
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Slime"))
@@ -50,6 +51,7 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+    // Check if players left the checkpoint
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Slime"))
@@ -67,7 +69,7 @@ public class Checkpoint : MonoBehaviour
             rabbitDetected = false;
         }
     }
-
+    
 
     public void ResetCheckPoint()
     {

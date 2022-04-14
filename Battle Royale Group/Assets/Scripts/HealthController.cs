@@ -25,7 +25,7 @@ public class HealthController : MonoBehaviour
 
     //public GameObject player;
 
-    public Transform launchPos;
+    //public Transform launchPos;
 
     private PowerUpController powerUpController;
 

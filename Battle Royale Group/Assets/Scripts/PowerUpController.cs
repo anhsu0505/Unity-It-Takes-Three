@@ -75,7 +75,7 @@ public class PowerUpController : MonoBehaviour
                 // If player picks up time collectible
                 case PowerUpType.AddTime:
                     // Player gets an extra 5 seconds
-                    timer.timeValue += 5;
+                    timer.timeValue += 10;
                     // Reset current power up to none
                     currentPowerUp = PowerUpType.None;
                     //play sound

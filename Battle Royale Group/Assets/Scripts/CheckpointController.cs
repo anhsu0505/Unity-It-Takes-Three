@@ -34,6 +34,7 @@ public class CheckpointController : MonoBehaviour
 
     public void DeactivateCheckpoints()
     {
+        // Loop through all checkpoints and deactivate each one
         for (int i = 0; i < checkPoints.Length; i++)
         {
             checkPoints[i].ResetCheckPoint();
@@ -43,6 +44,7 @@ public class CheckpointController : MonoBehaviour
 
     public void SetSpawnPoint(Vector3 newSpawnPoint)
     {
+        // Set new spawn point
         spawnPoint = newSpawnPoint;
         //Debug.Log(spawnPoint);
     }

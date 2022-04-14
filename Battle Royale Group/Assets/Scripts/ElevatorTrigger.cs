@@ -18,7 +18,8 @@ public class ElevatorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( slimeOn==true && dancerOn == true && rabbitOn == true ){
+        if( slimeOn==true && dancerOn == true && rabbitOn == true)
+        {
             elevatorMove();
         }
 
@@ -36,9 +37,8 @@ public class ElevatorTrigger : MonoBehaviour
         }
     }
 
-
-
-    void elevatorMove(){
+    void elevatorMove()
+    {
         // print(platform.position);
         // Move from the current position to the next point
         elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);

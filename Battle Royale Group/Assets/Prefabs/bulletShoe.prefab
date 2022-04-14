@@ -158,3 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76d15db3f3ed034b9d353c8f8e2d665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectibles:
+  - {fileID: 6427711923892931589, guid: 6b9113170072577458c66c0da4097e54, type: 3}
+  - {fileID: 5609081815140374515, guid: 6f135993ae1929047bfbe658b741a067, type: 3}
+  - {fileID: 1287700265893439620, guid: 1c9be569cf473334ba9e57a9a4873d67, type: 3}
+  - {fileID: 454212159563371883, guid: aeea837c4c6688f4e99d4e4e0914b705, type: 3}
+  dropRate: 100
