@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
             // Set volume to 50%
-            PlayerPrefs.SetFloat("musicVolume", 0.5f);
+            PlayerPrefs.SetFloat("musicVolume", 1f);
             Load();
         }
         else
