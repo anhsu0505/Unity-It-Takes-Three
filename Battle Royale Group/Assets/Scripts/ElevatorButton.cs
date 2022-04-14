@@ -31,6 +31,7 @@ public class ElevatorButton : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         if((other.gameObject.CompareTag("Rabbit")||other.gameObject.CompareTag("Slime")||other.gameObject.CompareTag("Dancer"))&&ifMove==false){
             ifMove = true;
+            _audioSource.PlayOneShot(buttonSound);
             print("botton down, move elevator");
         }
         else{
@@ -50,7 +51,7 @@ public class ElevatorButton : MonoBehaviour
     void elevatorMoveUp(){
         // print(platform.position);
         // Move from the current position to the next point
-        _audioSource.PlayOneShot(buttonSound);
+        
         elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point2.position, moveSpeed * Time.deltaTime);
     }
 
