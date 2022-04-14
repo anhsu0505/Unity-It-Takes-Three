@@ -24,6 +24,7 @@ public class PowerUpController : MonoBehaviour
     //sounds
     private SoundsPlayer soundsPlayerCode;
 
+    public GameObject pickupEffect;
 
     void Start()
     {
@@ -45,6 +46,8 @@ public class PowerUpController : MonoBehaviour
             // Check the type of collectible player picks up
             currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
 
+            // Display effect
+            Instantiate(pickupEffect, other.transform.position, other.transform.rotation);
             //Destroy the collectible 
             Destroy(other.gameObject);
 

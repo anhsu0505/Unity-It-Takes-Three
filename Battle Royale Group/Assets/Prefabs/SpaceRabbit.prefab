@@ -430,6 +430,7 @@ MonoBehaviour:
   invinciblePowerUp: 0
   invincibleDisplay: {fileID: 1421680415}
   livesDisplay: {fileID: 0}
+  pickupEffect: {fileID: 6962616253095731100, guid: 37b6a55117ce52c42a42c68a8bb9fc58, type: 3}
 --- !u!114 &862916269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +450,6 @@ MonoBehaviour:
   livesDisplay: {fileID: 0}
   isAlive: 0
   invincibleLength: 1
-  launchPos: {fileID: 0}
 --- !u!82 &1668014226
 AudioSource:
   m_ObjectHideFlags: 0

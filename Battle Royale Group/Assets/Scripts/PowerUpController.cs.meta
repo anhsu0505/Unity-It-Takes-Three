@@ -3,7 +3,10 @@ guid: 610e2911f8700924da4cf98801a94646
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - invincibleDisplay: {instanceID: 0}
+  - livesDisplay: {instanceID: 0}
+  - pickupEffect: {fileID: 6962616253095731100, guid: 37b6a55117ce52c42a42c68a8bb9fc58, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

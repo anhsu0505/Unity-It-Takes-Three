@@ -98,7 +98,7 @@ public class BalletController : MonoBehaviour
                 //sound
                 _audioSource.PlayOneShot(shootSound);
 
-                _animator.SetTrigger("shoot");
+                _animator.SetTrigger("Shoot");
             }
         }       
     }

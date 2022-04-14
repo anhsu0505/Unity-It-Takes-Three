@@ -276,6 +276,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   feetPos: {fileID: 3003324649046483283}
+  shootSound_ice: {fileID: 8300000, guid: 0a678e50baa284336a6096965cddf991, type: 3}
+  shootSound_fire: {fileID: 8300000, guid: 552ab904f18f249b6b0a7f94e470a65b, type: 3}
 --- !u!61 &3003324649555693828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -339,6 +341,7 @@ MonoBehaviour:
   invinciblePowerUp: 0
   invincibleDisplay: {fileID: 81614591}
   livesDisplay: {fileID: 0}
+  pickupEffect: {fileID: 6962616253095731100, guid: 37b6a55117ce52c42a42c68a8bb9fc58, type: 3}
 --- !u!114 &1729207998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +361,6 @@ MonoBehaviour:
   livesDisplay: {fileID: 0}
   isAlive: 0
   invincibleLength: 1
-  launchPos: {fileID: 0}
 --- !u!82 &8560827555865462846
 AudioSource:
   m_ObjectHideFlags: 0
@@ -371,7 +373,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
