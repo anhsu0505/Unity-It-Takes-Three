@@ -7,6 +7,8 @@ public class DetectCollision : MonoBehaviour
     public GameObject[] collectibles;
     public float dropRate;
 
+    public GameObject explosionEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class DetectCollision : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && gameObject.CompareTag("Bullet") || other.CompareTag("Swan") && gameObject.CompareTag("Shoe") || other.CompareTag("Plant") && gameObject.CompareTag("fire_bullet"))
         {
+            Instantiate(explosionEffect, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
             Destroy(gameObject);
 

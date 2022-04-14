@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70d038068998b142817e7b59a2e66a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeSpan: 2
 --- !u!114 &7708304314114718168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +154,4 @@ MonoBehaviour:
   - {fileID: 1287700265893439620, guid: 1c9be569cf473334ba9e57a9a4873d67, type: 3}
   - {fileID: 454212159563371883, guid: aeea837c4c6688f4e99d4e4e0914b705, type: 3}
   dropRate: 100
+  explosionEffect: {fileID: 655755625360685832, guid: 911931bbfa06cca448bd76b110804218, type: 3}
