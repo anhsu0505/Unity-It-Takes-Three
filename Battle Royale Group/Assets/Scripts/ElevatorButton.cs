@@ -34,9 +34,6 @@ public class ElevatorButton : MonoBehaviour
             _audioSource.PlayOneShot(buttonSound);
             print("botton down, move elevator");
         }
-        else{
-            ifMove = false;
-        }
     }
 
     void FixedUpdate(){
@@ -45,24 +42,28 @@ public class ElevatorButton : MonoBehaviour
             elevatorMoveUp();
             StartCoroutine(elevatorMoveDown());
         }
+        print(ifMove);
     }
 
 
     void elevatorMoveUp(){
         // print(platform.position);
         // Move from the current position to the next point
-        
         elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point2.position, moveSpeed * Time.deltaTime);
     }
 
     IEnumerator elevatorMoveDown(){
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(9);
+
+        if(ifMove == true){
+            ifMove = false;
+        }
         // print("point1="+point1.position);
         // print("elevator="+elevator.transform.position);
-        ifMove = false;
         rend.material.color = defaultColor;
         // Move from the current position to the next point
-        elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point1.position, moveSpeed * Time.deltaTime);
+        elevator.transform.position = Vector2.MoveTowards(elevator.transform.position, point1.position, moveSpeed *1.2f* Time.deltaTime);
     }
+
 
 }

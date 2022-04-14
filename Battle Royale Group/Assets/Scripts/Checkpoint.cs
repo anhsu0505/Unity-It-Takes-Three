@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    AudioSource _audioSource;
+    public AudioClip sound;
+    public bool ifSoundPlayed = false;
+
     public SpriteRenderer checkPointSR;
     public Sprite cpOn, cpOff;
 
@@ -14,7 +18,7 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,11 @@ public class Checkpoint : MonoBehaviour
             CheckpointController.instance.DeactivateCheckpoints();
             // Activate the new checkpoint
             checkPointSR.sprite = cpOn;
+            //add sound
+            if(!ifSoundPlayed){
+                _audioSource.PlayOneShot(sound);
+                ifSoundPlayed = true;
+            }
             // Set new spawn point to most recent checkpoint
             CheckpointController.instance.SetSpawnPoint(transform.position);
         }
