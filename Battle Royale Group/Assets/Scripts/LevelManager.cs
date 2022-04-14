@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     public HealthController[] healthControllers;
 
+    public string sceneToLoad = "";
+
     private void Awake()
     {
         instance = this;
@@ -64,5 +66,17 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitToRespawn);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameOverCoroutine());
+    }
+
+    IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(waitToRespawn);
+        sceneToLoad = "Losing";
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

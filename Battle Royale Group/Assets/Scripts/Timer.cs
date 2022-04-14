@@ -10,12 +10,12 @@ public class Timer : MonoBehaviour
     public float timeValue = 90;
     public TextMeshProUGUI timerText;
 
-    public GameObject gameOver;
+    //public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameOver.SetActive(false);
+        //gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,7 +39,8 @@ public class Timer : MonoBehaviour
             // If timer reaches 0
             timeValue = 0;
             Debug.Log("Game Over!");
-            gameOver.SetActive(true);
+            LevelManager.instance.GameOver();
+            //gameOver.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {

@@ -2539,7 +2539,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeValue: 180
   timerText: {fileID: 413594271}
-  gameOver: {fileID: 2047268223}
 --- !u!1001 &423071961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3616,7 +3615,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.6069345
+  orthographic size: 6.615835
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3639,7 +3638,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0.012232623, y: 0.044702522, z: 0.0005474174, w: 0.9989253}
+  m_LocalRotation: {x: -0.012232622, y: 0.044702496, z: 0.000547417, w: 0.9989253}
   m_LocalPosition: {x: -1.9700764, y: -2.9637494, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4241,6 +4240,10 @@ PrefabInstance:
     - target: {fileID: 4369924188549944044, guid: 28f6a512614f2dc4a837f9dec258683b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369924188549944047, guid: 28f6a512614f2dc4a837f9dec258683b, type: 3}
+      propertyPath: sceneToLoad
+      value: Winning
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f6a512614f2dc4a837f9dec258683b, type: 3}
@@ -6282,7 +6285,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924523800}
-  m_LocalRotation: {x: -0.012232623, y: 0.044702522, z: 0.0005474174, w: 0.9989253}
+  m_LocalRotation: {x: -0.012232622, y: 0.044702496, z: 0.000547417, w: 0.9989253}
   m_LocalPosition: {x: -1.9700764, y: -2.9637494, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -114754,7 +114757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1941454170631499512, guid: 67d7708e32fb8124eaeafcdb3129e254, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000045776367
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 1941454170631499512, guid: 67d7708e32fb8124eaeafcdb3129e254, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
