@@ -3,4 +3,4 @@
 
 ### This is the repository for a group project in Unity
 
-#### Group Members: My Linh Le, Zhicun Wang, Junru Xu
+#### Group Members: [My Linh Le](https://itch.io/profile/mlinhle617), [Junru Xu](https://www.anxu.me/), [Zhicun Wang](https://zhicun.itch.io/)
